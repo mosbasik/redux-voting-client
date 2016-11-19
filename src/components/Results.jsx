@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Winner from './Winner';
 import Tally from './Tally';
 import Management from './Management';
+import * as actionCreators from '../action_creators';
 
 export class Results extends React.PureComponent {
     render() {
@@ -26,4 +27,7 @@ function mapStateToProps(state) {
     }
 }
 
-export const ResultsContainer = connect(mapStateToProps)(Results);
+export const ResultsContainer = connect(
+    mapStateToProps,
+    actionCreators
+)(Results);
