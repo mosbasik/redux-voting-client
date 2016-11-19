@@ -1,10 +1,11 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import Winner from './Winner';
 import Tally from './Tally';
 import Management from './Management';
 
-class Results extends React.PureComponent {
+export class Results extends React.PureComponent {
     render() {
         return this.props.winner ?
 
@@ -17,4 +18,12 @@ class Results extends React.PureComponent {
     }
 }
 
-export default Results;
+function mapStateToProps(state) {
+    return {
+        pair: state.getIn(['vote', 'pair']),
+        tally: state.getIn(['vote', 'tally']),
+        winner: state.get('winner')
+    }
+}
+
+export const ResultsContainer = connect(mapStateToProps)(Results);

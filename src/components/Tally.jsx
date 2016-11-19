@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Tally extends React.PureComponent {
+export default class Tally extends React.PureComponent {
     getPair() {
         return this.props.pair || [];
     }
@@ -20,5 +20,3 @@ class Tally extends React.PureComponent {
         </div>;
     }
 }
-
-export default Tally;

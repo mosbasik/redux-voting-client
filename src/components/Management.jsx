@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Management extends React.PureComponent {
+export default class Management extends React.PureComponent {
     render() {
         return <div className="management">
             <button ref="next"
@@ -11,6 +11,3 @@ class Management extends React.PureComponent {
         </div>;
     }
 }
-
-export default Management;
-

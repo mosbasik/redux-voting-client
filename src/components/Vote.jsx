@@ -1,7 +1,7 @@
 import React from 'react';
 
 // export default React.createClass({
-class Vote extends React.PureComponent {
+export default class Vote extends React.PureComponent {
     getPair() {
         return this.props.pair || [];
     }
@@ -26,5 +26,3 @@ class Vote extends React.PureComponent {
         </div>;
     }
 }
-
-export default Vote;
