@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, hashHistory} from 'react-router';
-import createStore from 'redux';
+import {createStore} from 'redux';
 
 import reducer from './reducer';
 import App from './components/App';
